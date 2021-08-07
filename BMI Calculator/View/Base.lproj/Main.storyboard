@@ -69,6 +69,9 @@
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Beq-JG-q42">
                                                 <rect key="frame" x="-2" y="140" width="402" height="71.5"/>
+                                                <connections>
+                                                    <action selector="heightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ggu-9O-sMk"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -92,8 +95,11 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-rC-ROc">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-rC-ROc">
                                                 <rect key="frame" x="-2" y="71" width="402" height="69.5"/>
+                                                <connections>
+                                                    <action selector="weightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="HGc-Un-LVL"/>
+                                                </connections>
                                             </slider>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyo-Ye-qPk">
                                                 <rect key="frame" x="0.0" y="142.5" width="398" height="68"/>
@@ -102,6 +108,9 @@
                                                 <state key="normal" title="CALCULATE">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5t-Yq-b9K"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -128,6 +137,10 @@
                             <constraint firstItem="K3o-Pv-Kqo" firstAttribute="top" secondItem="Snt-FE-vKg" secondAttribute="top" id="yFG-AN-8oe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="7qR-a5-dDq" id="UJN-Yo-eyx"/>
+                        <outlet property="weightLabel" destination="4nC-nb-AJy" id="GH8-3D-cBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
