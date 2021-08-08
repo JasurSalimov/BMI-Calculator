@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstPage" id="BYZ-38-t0r" customClass="CalculateViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,11 +26,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="LR2-K2-Zab">
-                                        <rect key="frame" x="8" y="52" width="398" height="210.5"/>
+                                        <rect key="frame" x="8" y="52" width="398" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="t2A-Bn-DLN">
-                                        <rect key="frame" x="8" y="236" width="398" height="211"/>
+                                        <rect key="frame" x="8" y="170.5" width="398" height="145.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATE                       YOUR BMI" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUI-eg-119">
@@ -43,11 +43,11 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="zQX-xj-1hP">
-                                        <rect key="frame" x="8" y="444" width="398" height="210.5"/>
+                                        <rect key="frame" x="8" y="313" width="398" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="oJv-Vg-idX">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qga-0R-MCX">
@@ -140,46 +140,47 @@
                     <connections>
                         <outlet property="heightLabel" destination="7qR-a5-dDq" id="UJN-Yo-eyx"/>
                         <outlet property="weightLabel" destination="4nC-nb-AJy" id="GH8-3D-cBi"/>
+                        <segue destination="8us-3u-IT4" kind="presentation" identifier="goToResult" id="TVQ-um-BCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="uwP-Ft-udI">
             <objects>
-                <viewController id="8us-3u-IT4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" id="8us-3u-IT4" customClass="ResultViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ex-7g-1dn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="96L-lV-6Or">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uZz-vE-9kZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8d9-wu-yC1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="284"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="280.5"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-62" translatesAutoresizingMaskIntoConstraints="NO" id="s8D-Aj-fcL">
-                                        <rect key="frame" x="0.0" y="284" width="414" height="284"/>
+                                        <rect key="frame" x="0.0" y="280.5" width="414" height="281"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa3-nf-DjE">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                                 <color key="textColor" red="0.23162806029999999" green="0.24668025969999999" blue="0.27059161659999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPS-pO-XbA">
-                                                <rect key="frame" x="0.0" y="74" width="414" height="136"/>
+                                                <rect key="frame" x="0.0" y="73" width="414" height="135"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EAT SOME MORE SNACKS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTw-1v-GUe">
-                                                <rect key="frame" x="0.0" y="148" width="414" height="136"/>
+                                                <rect key="frame" x="0.0" y="146" width="414" height="135"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -187,28 +188,31 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-14" translatesAutoresizingMaskIntoConstraints="NO" id="R7K-sX-LDh">
-                                        <rect key="frame" x="0.0" y="568" width="414" height="284"/>
+                                        <rect key="frame" x="0.0" y="561.5" width="414" height="280.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g8i-cq-Re9">
-                                                <rect key="frame" x="8" y="8" width="398" height="58"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="57"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F9S-7p-0uF">
-                                                <rect key="frame" x="8" y="52" width="398" height="58"/>
+                                                <rect key="frame" x="8" y="51" width="398" height="57.5"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FfE-Eq-weT">
-                                                <rect key="frame" x="8" y="96" width="398" height="58"/>
+                                                <rect key="frame" x="8" y="94.5" width="398" height="57.5"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2PG-Vg-oKv">
-                                                <rect key="frame" x="8" y="140" width="398" height="58"/>
+                                                <rect key="frame" x="8" y="138" width="398" height="57"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8V-YL-KLr">
-                                                <rect key="frame" x="8" y="184" width="398" height="58"/>
+                                                <rect key="frame" x="8" y="181" width="398" height="57.5"/>
                                                 <color key="backgroundColor" red="0.23162806029999999" green="0.24668025969999999" blue="0.27059161659999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <state key="normal" title="RECALCULATE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="recalculateButtonPressed:" destination="8us-3u-IT4" eventType="touchUpInside" id="NWd-Ia-3nQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -229,10 +233,14 @@
                             <constraint firstItem="uZz-vE-9kZ" firstAttribute="leading" secondItem="1hg-r6-Jbf" secondAttribute="leading" id="ujg-eN-3py"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="dPS-pO-XbA" id="VjB-oD-Hb2"/>
+                        <outlet property="suggestionLabel" destination="hTw-1v-GUe" id="ZYY-dI-Am4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEL-oe-h6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921.73913043478262" y="93.75"/>
+            <point key="canvasLocation" x="877" y="94"/>
         </scene>
     </scenes>
     <resources>

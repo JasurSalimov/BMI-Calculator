@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     var bmiBrain = BmiBrain()
@@ -27,11 +27,25 @@ class ViewController: UIViewController {
     @IBAction func calculatePressed(_ sender: UIButton) {
         print("Button Calculate was pressed")
         print("BMI = \(bmiBrain.calculate())")
+        print(bmiBrain.bmi)
         
+       
+
+        self.performSegue(withIdentifier: "goToResult", sender: self)
+        
+        //connecting new second view controller
+       
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "goToResult"){
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.bmiResult = String(round(10*bmiBrain.bmi)/10)
+            
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
