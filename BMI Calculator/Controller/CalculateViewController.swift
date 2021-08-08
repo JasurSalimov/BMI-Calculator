@@ -13,11 +13,13 @@ class CalculateViewController: UIViewController {
     var bmiBrain = BmiBrain()
     
     @IBAction func heightSlider(_ sender: UISlider) {
+        print(sender.value)
         heightLabel.text = "\(String(round(100*sender.value)/100)) m "
         bmiBrain.heightInit(h: Double(round(100*sender.value)/100))
         print(bmiBrain.height)
     }
     @IBAction func weightSlider(_ sender: UISlider) {
+        print(sender.value)
         weightLabel.text = "\(String(round(10*sender.value)/10)) kg"
         bmiBrain.weightInit(w: Double(round(10*sender.value)/10))
         print(bmiBrain.weight)
@@ -41,7 +43,7 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goToResult"){
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiResult = String(round(10*bmiBrain.bmi)/10)
+            destinationVC.bmiResult = bmiBrain.bmi
             
             
         }

@@ -26,11 +26,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="LR2-K2-Zab">
-                                        <rect key="frame" x="8" y="52" width="398" height="145"/>
+                                        <rect key="frame" x="8" y="52" width="398" height="210.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="t2A-Bn-DLN">
-                                        <rect key="frame" x="8" y="170.5" width="398" height="145.5"/>
+                                        <rect key="frame" x="8" y="236" width="398" height="211"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATE                       YOUR BMI" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUI-eg-119">
@@ -43,11 +43,11 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="zQX-xj-1hP">
-                                        <rect key="frame" x="8" y="313" width="398" height="145"/>
+                                        <rect key="frame" x="8" y="444" width="398" height="210.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="oJv-Vg-idX">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="70"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qga-0R-MCX">
